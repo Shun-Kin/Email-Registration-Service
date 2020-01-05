@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="efc42d83-fcd2-4b19-b7d8-75a38f2cf194" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Email Registration Service/EmailRegistration.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EmailRegistration.xsd" MetadataType="Schema" ID="fe65b670-e1ab-4aa7-8fc4-8f8dbcbd2174" SourceId="1" SourceUrl="http://localhost/Email Registration Service/EmailRegistration.svc?xsd=xsd1" />
+    <MetadataFile FileName="EmailRegistration1.xsd" MetadataType="Schema" ID="94dd6655-fea8-4164-b4c0-8ce65b9c32e5" SourceId="1" SourceUrl="http://localhost/Email Registration Service/EmailRegistration.svc?xsd=xsd0" />
+    <MetadataFile FileName="EmailRegistration3.xsd" MetadataType="Schema" ID="b4ecfe1f-061d-4057-a1a3-e699a9b9be28" SourceId="1" SourceUrl="http://localhost/Email Registration Service/EmailRegistration.svc?xsd=xsd3" />
+    <MetadataFile FileName="EmailRegistration2.xsd" MetadataType="Schema" ID="43927576-9e80-4ae0-bd51-204aba66cb8f" SourceId="1" SourceUrl="http://localhost/Email Registration Service/EmailRegistration.svc?xsd=xsd2" />
+    <MetadataFile FileName="EmailRegistration.disco" MetadataType="Disco" ID="3d5b1747-91ae-463f-b596-df529fcfee9e" SourceId="1" SourceUrl="http://localhost/Email Registration Service/EmailRegistration.svc?disco" />
+    <MetadataFile FileName="EmailRegistration.wsdl" MetadataType="Wsdl" ID="95e9bb77-2576-43b6-83bd-25213959f18a" SourceId="1" SourceUrl="http://localhost/Email Registration Service/EmailRegistration.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

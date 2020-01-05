@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EmailRegistration" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/Email Registration Service/EmailRegistration.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/Email Registration Service/EmailRegistration.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Email Registration Service/EmailRegistration.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Email_Registration_Service" />
+      <xsd:import schemaLocation="http://localhost/Email Registration Service/EmailRegistration.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEmailRegistration_TestConnection_InputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnection" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_TestConnection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmails" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmailById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailById" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmailById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_AddEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmail" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_AddEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_UpdateEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmail" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_UpdateEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmailsByPeriod_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailsByPeriod" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmailsByPeriod_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailsByPeriodResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmailsByTo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailsByTo" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmailsByTo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailsByToResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmailsByFrom_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailsByFrom" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmailsByFrom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailsByFromResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmailsByTag_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailsByTag" />
+  </wsdl:message>
+  <wsdl:message name="IEmailRegistration_GetEmailsByTag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmailsByTagResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IEmailRegistration">
+    <wsdl:operation name="TestConnection">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailRegistration/TestConnection" message="tns:IEmailRegistration_TestConnection_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailRegistration/TestConnectionResponse" message="tns:IEmailRegistration_TestConnection_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmails" message="tns:IEmailRegistration_GetEmails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailsResponse" message="tns:IEmailRegistration_GetEmails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailById" message="tns:IEmailRegistration_GetEmailById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailByIdResponse" message="tns:IEmailRegistration_GetEmailById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailRegistration/AddEmail" message="tns:IEmailRegistration_AddEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailRegistration/AddEmailResponse" message="tns:IEmailRegistration_AddEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailRegistration/UpdateEmail" message="tns:IEmailRegistration_UpdateEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailRegistration/UpdateEmailResponse" message="tns:IEmailRegistration_UpdateEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailsByPeriod">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailsByPeriod" message="tns:IEmailRegistration_GetEmailsByPeriod_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailsByPeriodResponse" message="tns:IEmailRegistration_GetEmailsByPeriod_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailsByTo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailsByTo" message="tns:IEmailRegistration_GetEmailsByTo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailsByToResponse" message="tns:IEmailRegistration_GetEmailsByTo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailsByFrom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailsByFrom" message="tns:IEmailRegistration_GetEmailsByFrom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailsByFromResponse" message="tns:IEmailRegistration_GetEmailsByFrom_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailsByTag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailsByTag" message="tns:IEmailRegistration_GetEmailsByTag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IEmailRegistration/GetEmailsByTagResponse" message="tns:IEmailRegistration_GetEmailsByTag_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IEmailRegistration" type="tns:IEmailRegistration">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TestConnection">
+      <soap:operation soapAction="http://tempuri.org/IEmailRegistration/TestConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmails">
+      <soap:operation soapAction="http://tempuri.org/IEmailRegistration/GetEmails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailById">
+      <soap:operation soapAction="http://tempuri.org/IEmailRegistration/GetEmailById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmail">
+      <soap:operation soapAction="http://tempuri.org/IEmailRegistration/AddEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEmail">
+      <soap:operation soapAction="http://tempuri.org/IEmailRegistration/UpdateEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailsByPeriod">
+      <soap:operation soapAction="http://tempuri.org/IEmailRegistration/GetEmailsByPeriod" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailsByTo">
+      <soap:operation soapAction="http://tempuri.org/IEmailRegistration/GetEmailsByTo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailsByFrom">
+      <soap:operation soapAction="http://tempuri.org/IEmailRegistration/GetEmailsByFrom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmailsByTag">
+      <soap:operation soapAction="http://tempuri.org/IEmailRegistration/GetEmailsByTag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EmailRegistration">
+    <wsdl:port name="BasicHttpBinding_IEmailRegistration" binding="tns:BasicHttpBinding_IEmailRegistration">
+      <soap:address location="http://localhost/Email Registration Service/EmailRegistration.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
